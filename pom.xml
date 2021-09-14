@@ -2,17 +2,35 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.escuelaing.arem</groupId>
-  <artifactId>FrameworkIoC</artifactId>
+  <artifactId>NamesNetworkClientService</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>FrameworkIoC</name>
+  <name>NamesNetworkClientService</name>
   <url>http://maven.apache.org</url>
+  <!-- Compiler properties -->
+  <properties>
+	<maven.compiler.target>1.8</maven.compiler.target>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	<encoding>UTF-8</encoding>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+    <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>bootstrap</artifactId>
+        <version>5.1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
+    <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>jquery</artifactId>
+        <version>3.6.0</version>
     </dependency>
   </dependencies>
 </project>
