@@ -8,6 +8,8 @@ import java.nio.file.Paths;
 
 import javax.imageio.ImageIO;
 
+import edu.escuelaing.arem.framework.Framework;
+
 import java.awt.image.BufferedImage;
 import java.io.*;
 
@@ -48,7 +50,8 @@ public class HttpServer {
 			System.err.println("Could not listen on port: " + port);
 			System.exit(1);
 		}
-
+		
+		Framework.startFramework(args);
 		boolean running = true;
 		while (running) {
 			Socket clientSocket = null;
@@ -88,7 +91,7 @@ public class HttpServer {
 		if ((stringRequest != null) && (stringRequest.length() != 0)) {
 			String[] request = stringRequest.split(" ");
 			String uriStr = request[1];
-			System.out.println("uriStr:" + uriStr);
+			//System.out.println("uriStr:" + uriStr);
 			URI resourceURI = new URI(uriStr);
 			getResource(resourceURI, out, clientSocket.getOutputStream(), uriStr);
 		}
@@ -106,17 +109,21 @@ public class HttpServer {
      * @throws IOException
      */
 	private void getResource(URI resourceURI, PrintWriter out, OutputStream outputStream, String uriStr) throws IOException {
-		String outputLine;
+		String outputLine = "";
 		String mimeType = contentType(resourceURI.getPath());
 		if (mimeType != null) {
 			if (mimeType.contains("image")) {
 				String[] extension = uriStr.split("\\.");
 				getImageResource(resourceURI, outputStream, extension[1]);
 			} 
-			else {
+			else if (mimeType.contains("text")) {
 				outputLine = getTextResource(resourceURI);
 				out.println(outputLine);
 			}
+		}
+		else if (resourceURI.toString().startsWith("/api")){
+				outputLine = Framework.getComponentResource(resourceURI);
+				out.println(outputLine);
 		}
 		else if (uriStr.equals("/")){
 			outputLine = defaultResponse();
