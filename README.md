@@ -15,7 +15,7 @@ El servidor web tiene la capacidad de entender recursos diversos como: .html, .c
 - [.html](https://myframework-ioc.herokuapp.com/index.html)
 - [.js](https://myframework-ioc.herokuapp.com/js/app.js)
 - [.css](https://myframework-ioc.herokuapp.com/css/style.css)
-- [.png](https://myframework-ioc.herokuapp.com/js/app.js/mafalda.png)
+- [.png](https://myframework-ioc.herokuapp.com/mafalda.png)
 
 Ejemplos de acceso a componentes del Framework:
 
