@@ -11,17 +11,17 @@ Construcción de un servidor(tipo Apache) usando solo Java y librerías para man
 #### 💡 Usos
 El servidor web tiene la capacidad de entender recursos diversos como: .html, .css, .js, .png para ser leidos por el cliente.Algunos ejemplos de los recursos que se pueden acceder desde el navegador son:
 
-- [Sin recurso](https://webserver-client-server.herokuapp.com)
-- [.html](https://webserver-client-server.herokuapp.com/index.html)
-- [.js](https://webserver-client-server.herokuapp.com/js/app.js)
-- [.css](https://webserver-client-server.herokuapp.com/css/style.css)
-- [.png](https://webserver-client-server.herokuapp.com/mafalda.png)
+- [Sin recurso](https://myframework-ioc.herokuapp.com/)
+- [.html](https://myframework-ioc.herokuapp.com/index.html)
+- [.js](https://myframework-ioc.herokuapp.com/js/app.js)
+- [.css](https://myframework-ioc.herokuapp.com/css/style.css)
+- [.png](https://myframework-ioc.herokuapp.com/js/app.js/mafalda.png)
 
 Ejemplos de acceso a componentes del Framework:
 
 Usando el POJO Controller, se puede acceder:
-- [/api/sentence] que muestra en pantalla una frase.
-- [/api/personajes ] que muestra en pantalla un imagen desde internet.
+- [/api/sentence](https://myframework-ioc.herokuapp.com/api/sentence) que muestra en pantalla una frase.
+- [/api/personajes](https://myframework-ioc.herokuapp.com/api/personajes) que muestra en pantalla un imagen obtenida desde internet.
 
 ### 📜 Arquitectura y Diseño detallado
 El Framework desarollado está compuesto de:
