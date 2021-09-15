@@ -31,7 +31,6 @@ public class Framework {
 			String classPath = resourceURI.getPath().toString().replaceAll("/api", "");
 			if (resources.containsKey(classPath)) {
 				response = resources.get(classPath).invoke(null).toString();
-				response = "HTTP/1.1 200 OK\r\nContent - Type: text/html\r\n\r\n" + "Hola mundo :)";	
 			}
 		}catch(InvocationTargetException e) {
 			e.printStackTrace();
